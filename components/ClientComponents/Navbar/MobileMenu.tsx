@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/accordion";
 
 const categories = [
-  "Electronics",
+  "Electronsdsics",
   "Clothing",
   "Books",
   "Home & Garden",
@@ -32,7 +32,12 @@ const saleItems = [
   "Camera B - 20% off",
 ];
 
-export default function MobileMenu({ isOpen, setIsOpen }: any) {
+type MobileMenuProps = {
+  isOpen: boolean; // This should be boolean, not unknown
+  setIsOpen: (value: boolean) => void; // Accepts a boolean argument
+};
+
+export default function MobileMenu({ isOpen, setIsOpen }: MobileMenuProps) {
   return (
     <div
       className={`fixed inset-0 bg-black bg-opacity-50 z-50 md:hidden transition-opacity duration-300 ${

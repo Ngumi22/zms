@@ -5,10 +5,15 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Logo from "./logo";
 
+type MainNavProps = {
+  isMobileMenuOpen: boolean; // This should be boolean, not unknown
+  setIsMobileMenuOpen: (value: boolean) => void; // Accepts a boolean argument
+};
+
 export default function MainNav({
   isMobileMenuOpen,
   setIsMobileMenuOpen,
-}: any) {
+}: MainNavProps) {
   return (
     <div className="bg-[#151C25] py-6 px-4 space-y-4">
       <div className="mx-auto flex items-center justify-between">

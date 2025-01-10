@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import TopNav from "./TopBar";
 import MobileMenu from "./MobileMenu";
 
-export default function NewNavbar() {
+export default function Navbar() {
   const [showFullNav, setShowFullNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
